@@ -68,6 +68,7 @@ li ul{
 	background-image: url('../img/background_HL.png');
 	background-size: cover;
 	height: 460px;
+	position: relative;
 }
 
 #highlight article{
@@ -149,6 +150,7 @@ li ul{
 	border: 1px solid #5C5C5C;
 	height: 34px;
 	margin-left: 7px;
+	margin-top: 17px;
 	padding: 0 20px 0 10px;
 	vertical-align: top;
 }
@@ -199,4 +201,51 @@ li ul{
 
 #highlight .extraText span{
 	font-weight: bold;
+}
+
+#highlight ul{
+	bottom: 0%;
+	display: inline-block;
+	font-size: 20px;
+	height: unset;
+	left: 50%; 
+	line-height: 1.6;
+	position: absolute;
+	transform: translate(-50%, 0);
+	text-transform: uppercase;
+	vertical-align: middle;
+
+}
+
+#highlight ul .active{
+	border-bottom: 4px solid #FC4135;
+
+}
+
+#otherMovies{
+	background-color: #141414;
+}
+
+#otherMovies .list{
+	color: #FFFFFF;
+	font-size: 20px;
+	font-weight: 400;
+	padding-bottom: 15px;
+	padding-left: 40px;
+	padding-top: 40px;
+}
+
+#otherMovies ul{
+	margin: 0 40px;
+	width: calc(100% - 80px);
+}
+
+#otherMovies ul li{
+	display: inline-block;
+	margin-right: 1px;
+	vertical-align: middle;
+	width: calc(16.5% - 14px);
+}
+#otherMovies ul li img{
+	width: 100%;
 }
