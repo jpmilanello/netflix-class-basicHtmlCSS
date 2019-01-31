@@ -10,7 +10,7 @@
 <header>
 	<h1 id="logo"><img src="img/logo.png"/></h1>
 	<nav>
-		<ul>
+		<ul class="menuTop">
 			<li>Inicio</li>
 			<li>Series</li>
 			<li>Películas</li>
@@ -19,22 +19,24 @@
 		</ul>
 	</nav>
 	<nav id="alternateNav">
-		<ul>
+		<ul class="menuTop">
 			<li><img src="img/search.png" width="15"></li>
 			<li>Niños</li>
 			<li><img src="img/notifications.png" width="35"></li>
-			<li><img src="img/avatar.png" width="35"><img src="img/arrow_down.png" width="15">
-				<ul>
-					<li>Andres</li>
-					<li>Vale</li>
-					<li>Niños</li>
-					<li>Administrar perfiles</li>
-					<li>Cuenta</li>
-					<li>Centro de ayuda</li>
-					<li>Cerrar sesion en Netflix</li>
+			<li  id="openMenu"><div><img src="img/avatar.png" width="35"><img src="img/arrow_down.png" width="15"></div>
+				<ul id="rightMenu" class="closed">
+					<li><img src="img/picture_Andres.png" width="30">Andres</li>
+					<li><img src="img/picture_vale.png" width="30">Vale</li>
+					<li><img src="img/picture_Niños.png" width="30">Niños</li>
+					<li><img src="img/picture_Otro.png" width="30">Otro</li>
+					<li class="top">Administrar perfiles</li>
+					<li><span>Cuenta</span></li>
+					<li><span>Centro de ayuda</span></li>
+					<li><span>Cerrar sesion en Netflix</span></li>
 				</ul>
 			</li>
 		</ul>
+		<!--<p id="arrowUp"><img src="img/arrow_up.png" width="13"></p>-->
 	</nav>
 </header>
 <section id="highlight">
@@ -51,10 +53,10 @@
 		<div class="cast"><img src="img/chair.png"> <p>Kerry Washington y Tony Goldwyn vibran en este excelente drama de intriga, política y momentos sorprendentes.</p></div>
 		<p class="extraText"><span>Protagonistas:</span>Kerry Washington, Colombus Short, Darby Stanchfield </br><span>Generos:</span> TV sobre política, Dramas de TV, TV sobre crimen </br><span>Este programa es:</span> Sombrío, Intrigante, Emocianante</p>
 	</article>
-	<ul>
+	<ul id="menuBottom">
 		<li class="active">Descripcion General</li>
 		<li>Episodios</li>
-		<li>Mas Ssimilares</li>
+		<li>Mas Similares</li>
 		<li>Detalles</li>
 	</ul>
 </section>
@@ -69,5 +71,7 @@
 		<li><img src="img/movie_6.png"></li>
 	</ul>
 </div>
+<script src="js/jquery.js"></script>
+<script src="js/handler.js"></script>
 </body>
 </html>
