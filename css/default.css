@@ -32,21 +32,13 @@ nav{
 	transform: translate(0,-50%);
 }
 
-ul{
-	display: inline;
-	height: 100%;
-	margin: 0;
-	padding: 0;
-}
-
-li{
+nav li{
 	color: #E5E5E5;
 	display: inline-block;
 	font-size: 14px;
 	font-weight: 300;
 	margin-right: 20px;
 	list-style-type: none;
-	vertical-align: middle;
 }
 
 li img{
@@ -54,8 +46,62 @@ li img{
 	padding-right: 5px;
 }
 
+#arrowUp{
+	position: absolute;
+	left: 73%;
+}
+
 li ul{
+	background-color: #151515;
+	border: 1px solid #5C5C5C;
+	color: #EEEEEE;
+	display: block;
+	margin-right: 50px;
+	padding-bottom: 13px;
+	padding-top: 3px;
+	position: absolute;
+	right: -25px;
+	top: 52px;
+	width: 160px;
+}
+
+li ul.closed{
 	display: none;
+}
+
+li ul:before{
+	background: url('../img/arrow_up.png');
+	content: '';
+	display: inline-block;
+    height: 8px;
+	position: absolute;
+    right: 27px;
+    top: -9px;
+    width: 13px;
+}
+
+li ul li{
+	padding-left: 8px;
+	padding-top: 13px;
+	font-size: 13px;	
+}
+
+li ul .top{
+	border-bottom: 1px solid #5C5C5C;
+	margin-right: 0;
+    padding-bottom: 21px;
+	padding-top: 21px;
+	width: calc(100% - 8px);
+}
+
+li ul li img{
+	margin-right: 5px;
+}
+
+li ul span{
+	margin-top: 10px;
+	width: 200%;
+	font-weight: 740;
 }
 
 #alternateNav{
@@ -69,6 +115,7 @@ li ul{
 	background-size: cover;
 	height: 460px;
 	position: relative;
+	z-index: -1;
 }
 
 #highlight article{
@@ -203,7 +250,16 @@ li ul{
 	font-weight: bold;
 }
 
-#highlight ul{
+#highlight #menuBottom li{
+	color: #E5E5E5;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 300;
+	margin-right: 20px;
+	list-style-type: none;
+}
+
+#highlight #menuBottom{
 	bottom: 0%;
 	display: inline-block;
 	font-size: 20px;
