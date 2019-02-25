@@ -111,7 +111,6 @@ li ul span{
 }
 
 #highlight{
-	background-image: url('../img/background_HL.png');
 	background-size: cover;
 	height: 460px;
 	position: relative;
@@ -125,7 +124,7 @@ li ul span{
 	width: 520px;
 }
 
-#highlight article .title{
+#highlight article .title, #otherMovies div .title{
 	color: #FFFFFF;
 	font-size: 35px;
 	font-weight: bold;
@@ -138,18 +137,18 @@ li ul span{
 	margin-top: 15px;
 }
 
-#highlight article .subtitle{
+#highlight article .subtitle, #otherMovies div .subtitle{
 	color: #FFFFFF;
 	font-size: 16px;
 	font-weight: bold;
 	margin-top: 15px;
 }
 
-#highlight article .subtitle #likeble{
+#highlight article .subtitle .likeble, #otherMovies div .subtitle .likeble{
 	color: #4FAF57;
 }
 
-#highlight article .subtitle #ageRestriction{
+#highlight article .subtitle .ageRestriction, #otherMovies div .subtitle .ageRestriction{
 	border: 1px solid #5C5C5C;
 	padding: 2px 5px;
 }
@@ -202,13 +201,13 @@ li ul span{
 	vertical-align: top;
 }
 
-#highlight #thumbsWrapper{
+#highlight .thumbsWrapper,#otherMovies .thumpsWrapper{
 	display: inline-block;
 	margin-left: 20px;
 	margin-top: 15px;
 }
 
-#highlight #thumbsWrapper img{
+#highlight .thumbsWrapper img,#otherMovies .thumbsWrapper img{
 	border: 2px solid #5C5C5C;
 	border-radius: 50%;
 	top: 0;
@@ -229,6 +228,7 @@ li ul span{
 	padding: 5px;
 	top: 0;
 	transform: translate(0,0);
+	vertical-align: middle;
 	width: 20px;
 }
 
@@ -236,6 +236,7 @@ li ul span{
 	display: inline-block;
 	font-size: .96vw;
 	line-height: 1.3;
+	vertical-align: middle;
 	width: calc(100% - 40px);
 }
 
@@ -280,6 +281,7 @@ li ul span{
 
 #otherMovies{
 	background-color: #141414;
+	padding-bottom: 200px;
 }
 
 #otherMovies .list{
@@ -292,16 +294,142 @@ li ul span{
 }
 
 #otherMovies ul{
+	align-items: center;
+	display: flex;
+	height: 300px;
 	margin: 0 40px;
+	overflow-x: hidden;
 	width: calc(100% - 80px);
 }
 
 #otherMovies ul li{
 	display: inline-block;
-	margin-right: 1px;
+	flex-grow: 0;
+	flex-shrink: 0;
+	margin-right: 1%;
+	position: relative;
+	transform-origin: center;
+	transition: transform 0.7s;
 	vertical-align: middle;
 	width: calc(16.5% - 14px);
 }
+
+#otherMovies ul li:first-child{
+	transform-origin: left center;
+}
+
+#otherMovies ul li:last-child{
+	transform-origin: right center;
+}
+
 #otherMovies ul li img{
 	width: 100%;
+}
+
+#otherMovies #thumbs .open{
+	position: relative;
+	transform: scale(2.2);
+	z-index: 2;
+}
+
+#otherMovies #thumbs .moveRight{
+	transform: translate(60%, 0);
+}
+
+#otherMovies #thumbs .moveRightFirst{
+	transform: translate(120%, 0);
+}
+
+#otherMovies #thumbs .moveLeft{
+	transform: translate(-60%, 0);
+}
+
+#otherMovies #thumbs .moveLeftLast{
+	transform: translate(-120%, 0);
+}
+
+#otherMovies #thumbs .infoWrapper{
+	height: 220%;
+	margin-bottom: 10px;
+	margin-left: -60%;
+	opacity: 0;
+	position: absolute;
+	top: -60%;
+	transform: scale(0.4545454545);
+	transform-origin: center;
+	transition: opacity	1s;
+	transition-delay: 0.5s;
+	width: 220%;
+}
+	
+#otherMovies .littleDetails{
+	bottom: 20px;
+	display: none;
+	padding-left: 10px;
+	position: absolute;
+	z-index: 1;
+}
+
+#otherMovies #thumbs .open .littleDetails{
+	display: block;
+}
+
+#otherMovies .littleDetails img{
+	color: #FF0000;
+	border: 1px solid #FFFFFF;
+	border-radius: 50%;
+	padding: 3px;
+	width: 25px;
+}
+
+#otherMovies div .title{
+	font-size: 16px;
+	padding-top: 10px;
+}
+
+#otherMovies div .subtitle .noSeasons{
+	font-weight: 300;
+	padding-top: 10px;
+}
+
+#otherMovies div .content{
+	color: #FFFFFF;
+	font-weight: 100;
+	padding-top: 10px;
+}
+
+#otherMovies div .content span{
+	color: #757575;
+}
+
+#otherMovies .thumbsWrapper{
+	bottom: 20px;
+	display: none;
+	flex-direction: column;
+	padding-right: 10px;
+	position: absolute;
+	right: 0;
+	z-index: 1;
+}
+
+#otherMovies .open .thumbsWrapper{
+	display: flex;
+}
+
+#otherMovies .thumbsWrapper img{
+	margin-top: 5px;
+}
+
+#otherMovies .arrowInformation img{
+	bottom: -10px;
+	display: none;
+	position: absolute;
+	right: 50%;
+	transform: translate(50%, 0);
+	width: 50px;
+	z-index: 1;
+}
+
+#otherMovies .open .arrowInformation img{
+	display: block;
 }
